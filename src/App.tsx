@@ -5,7 +5,8 @@ import FuncComponent from './components/FuncComponent'
 import ClassComponent from './components/ClassComponent'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import BasicNavbar from './components/BasicNavbar'
-import Main from './components/Main'
+import Home from './components/Home'
+import AlbumComponent from './components/AlbumComponent'
 
 // Ora voglio andare a installare ed importare bootstrap+react-bootstrap. Funzioneranno in un
 // ecosistema TS? Sì, però bisogna FORNIRE a TS le tipizzazioni dei componenti react-bootstrap.
@@ -19,7 +20,7 @@ function App() {
         <Row className="justify-content-center">
           <Col xs={12} md={6} className="text-center">
             <Routes>
-              <Route path="/" element={<Main />} />
+              <Route path="/" element={<Home />} />
               <Route
                 path="/class"
                 element={
@@ -33,6 +34,7 @@ function App() {
                 path="/func"
                 element={<FuncComponent price={100} loading={true} />}
               />
+              <Route path="/music" element={<AlbumComponent />} />
             </Routes>
           </Col>
         </Row>

@@ -1,7 +1,7 @@
 import { ListGroup } from 'react-bootstrap'
 import { Link, useLocation, useNavigate, useParams } from 'react-router-dom'
 
-const Main = function () {
+const Home = function () {
   // l'oggetto location, la funzione navigate e anche i params non necessitano di tipizzazione
   // const location = useLocation()
   // const navigate = useNavigate()
@@ -21,9 +21,12 @@ const Main = function () {
         <ListGroup.Item>
           <Link to="/func">Componenti a funzione</Link>
         </ListGroup.Item>
+        <ListGroup.Item>
+          <Link to="/music">Componente dettaglio album</Link>
+        </ListGroup.Item>
       </ListGroup>
     </div>
   )
 }
 
-export default Main
+export default Home
