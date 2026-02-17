@@ -31,6 +31,19 @@ class ClassComponent extends Component<
     name: 'Mario',
   }
 
+  // i metodi di lifecycle e.g. componentDidMount, componentDidUpdate vengono tipizzati automaticamente
+  componentDidMount() {
+    // qui mettereste il comportamento al mounting
+  }
+
+  componentDidUpdate(
+    // prevProps sarebbe di tipo ClassComponentProps, prevState è di tipo ClassComponentState
+    prevProps: ClassComponentProps,
+    prevState: ClassComponentState,
+  ) {
+    // qui mettereste il comportamento all'updating
+  }
+
   render() {
     return (
       <div className="mt-3">
